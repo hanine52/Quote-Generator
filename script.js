@@ -55,8 +55,8 @@ async function getQuotes() {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const apiUrl = 'https://type.fit/api/quotes';
     try {
-        const response = await fetch(proxyUrl + apiUrl);
-        //const response = await fetch(apiUrl);
+        //const response = await fetch(proxyUrl + apiUrl);
+        const response = await fetch(apiUrl);
         apiQuotes = await response.json();
         newQuote();
         removeLoadingSpinner();
